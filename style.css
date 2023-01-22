@@ -49,14 +49,17 @@ body {
   background: var(--body-color);
 }
 
+/* link href style */
 a {
   color: var(--white-color);
 }
 
+/* icon font awesome style */
 i {
   cursor: pointer;
 }
 
+/* button style */
 button {
   padding: 0.5em 1em;
   border: none;
@@ -83,14 +86,12 @@ button {
 }
 
 .loading img {
-  width: 10%;
+  width: 35%;
   margin-bottom: 1em;
 }
 
 iframe {
   display: none;
-  visibility: hidden;
-  opacity: 0;
 }
 
 /* desktop view */
