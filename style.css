@@ -363,6 +363,7 @@ section h2::after {
   padding: 2em 0;
   font-size: 0.8rem;
   position: relative;
+  color: var(--font-color);
 }
 
 .footer a {
@@ -382,6 +383,7 @@ section h2::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--white-color);
   background: var(--gradient);
 }
 
@@ -509,6 +511,11 @@ section h2::after {
   /* footer style */
   .footer {
     padding-bottom: 6em;
+    color: var(--font-color);
+  }
+
+  .footer a {
+    color: var(--font-color);
   }
 
   /* back-to-top style */
@@ -561,6 +568,11 @@ section h2::after {
   .footer {
     padding: 1em 0;
     background: var(--gradient);
+    color: var(--white-color);
+  }
+
+  .footer a {
+    color: var(--white-color);
   }
 
   /* back-to-top style */
