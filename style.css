@@ -22,8 +22,9 @@
   --font-size: 1rem;
   --transition: all 0.3s;
   --yellow-color: #ffc300;
-  --gradient-blue: linear-gradient(#53b3db, #3b83d3);
   --white-color: #e7eefb;
+  --aqua-color: #53b3db;
+  --gradient-blue: linear-gradient(#53b3db, #3b83d3);
 }
 
 /* create root for dark mode */
