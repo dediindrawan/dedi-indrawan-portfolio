@@ -110,7 +110,7 @@ document.querySelector('.year').innerHTML = year.getFullYear();
 
 window.addEventListener('load', () => {
     let progressBars = document.querySelectorAll('.progress-bar');
-    let progressValue = ['80%', '75%', '30%'];
+    let progressValue = ['65%', '65%', '20%'];
     progressBars.forEach((progress, i) => {
         progress.style.width = progressValue[i];
     });
