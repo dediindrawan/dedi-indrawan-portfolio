@@ -49,3 +49,50 @@ document.querySelector('.dark-mode').addEventListener('click', () => {
     const lightMode = document.querySelector('.light-mode');
     lightMode.style.display = 'block';
 });
+
+// create lazy load every window are scrolling
+window.addEventListener('scroll', reveal);
+
+// activated funtion
+function reveal() {
+    let reveals = document.querySelectorAll('.reveal');
+
+    // create looping for all elements
+    for (let i = 0; i < reveals.length; i++) {
+        // set height window
+        let windowHeight = window.innerHeight;
+        // set gap window
+        let revealTop = reveals[i].getBoundingClientRect().top;
+        // set size scrolling
+        let revealPoint = 150;
+
+
+        // run funtion
+        if (revealTop < windowHeight - revealPoint) {
+            // add classlist
+            reveals[i].classList.add('active');
+        } else {
+            // remove classlist
+            reveals[i].classList.remove('active');
+        };
+    };
+};
+
+// initialize variable to executed hide & show back-to-top button
+let lastScrollUp = 0;
+const backToTop = document.querySelector('.back-to-top');
+
+// create show & hide every window are scrolling
+window.addEventListener('scroll', function () {
+    // create condition
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollUp) {
+        // show button
+        backToTop.style.bottom = '70px';
+    } else {
+        // hide button
+        backToTop.style.bottom = '-20%';
+    };
+    // return condition
+    lastScrollUp = scrollTop;
+});

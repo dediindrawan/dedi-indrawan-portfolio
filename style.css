@@ -14,7 +14,6 @@
 :root {
   --body-color: #e7eefb;
   --font-color: #374050;
-  --yellow-color: #ffc300;
   --gradient: linear-gradient(#53b3db, #3b83d3);
   --opacity: 0.2;
   --hover-color: #374050;
@@ -22,14 +21,9 @@
   --font-roboto: 'Roboto', sans-serif;
   --font-size: 1rem;
   --transition: all 0.3s;
+  --yellow-color: #ffc300;
   --gradient-blue: linear-gradient(#53b3db, #3b83d3);
-
   --white-color: #e7eefb;
-  --black-color: #04040c;
-  --grey-color: #374050;
-  --aqua-color: #53b3db;
-  --blue-color: #3b83d3;
-  --orange-color: #fc6e51;
 }
 
 /* create root for dark mode */
@@ -40,10 +34,6 @@
   --opacity: 0.5;
   --hover-color: #53b3db;
   --border-color: #374050;
-
-  --aqua-color: #53b3db;
-  --blue-color: #3b83d3;
-  --orange-color: #fc6e51;
 }
 
 /* html & body style */
@@ -246,6 +236,19 @@ button {
   text-align: center;
 }
 
+.reveal {
+  transform: translateY(150px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+}
+
+.active {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
 section h2::after {
   content: '';
   display: block;
@@ -306,7 +309,7 @@ section h2::after {
 
 .my-portfolio img {
   width: 100%;
-  height: 250px;
+  height: 100%;
   border-radius: 10px;
   object-fit: cover;
   object-position: center;
@@ -330,6 +333,7 @@ section h2::after {
 .contact-me {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 2em;
 }
 
@@ -376,7 +380,7 @@ section h2::after {
   height: 30px;
   padding: 1em;
   border-radius: 10px;
-  position: absolute;
+  position: fixed;
   right: 20px;
   bottom: 20px;
   font-size: 1.5rem;
@@ -394,15 +398,6 @@ section h2::after {
   /* styling parent of all element in wrapper-navbar areas */
   .wrapper-navbar {
     padding: 0 1.5em;
-  }
-
-  /* mode-switch style as parent of icon light & dark */
-  .mode-switch {
-    width: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
   }
 
   /* nav-link style */
@@ -475,7 +470,7 @@ section h2::after {
 
   .my-portfolio img {
     width: 100%;
-    height: 300px;
+    height: 100%;
     border-radius: 10px;
     margin-top: 2em;
   }
@@ -496,16 +491,15 @@ section h2::after {
     width: 100%;
   }
 
+  .telp,
+  .social-media {
+    margin-top: 2em;
+  }
+
   .email span:first-child,
   .telp span:first-child,
   .social-media span:first-child {
     margin-bottom: 0.5em;
-  }
-
-  .email span:last-child,
-  .telp span:last-child,
-  .social-media span:last-child {
-    margin-bottom: 2em;
   }
 
   /* footer style */
@@ -528,10 +522,15 @@ section h2::after {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media screen and (min-device-width: 768px) and (max-device-width: 992px) and (orientation: landscape) {
+@media screen and (min-device-width: 550px) and (max-device-width: 992px) and (orientation: landscape) {
+  /* styling parent of all element in wrapper-navbar areas */
+  .wrapper-navbar {
+    padding: 0 1.5em;
+  }
+
   /* nav-link style */
   .nav-link {
-    width: 50%;
+    width: 60%;
     margin-left: 0;
   }
 
@@ -556,12 +555,36 @@ section h2::after {
     width: 30%;
   }
 
-  .my-portfolio img {
-    height: 220px;
-  }
-
   .my-portfolio figure:not(:first-child) {
     margin-left: 1.5em;
+  }
+
+  /* contact-me style */
+  .contact-me {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+  }
+
+  .email,
+  .telp,
+  .social-media {
+    width: 50%;
+  }
+
+  .email,
+  .telp {
+    margin-bottom: 1.5em;
+  }
+
+  .social-media {
+    margin: auto;
+  }
+
+  .email span:first-child,
+  .telp span:first-child,
+  .social-media span:first-child {
+    margin-bottom: 0.5em;
   }
 
   /* footer style */
