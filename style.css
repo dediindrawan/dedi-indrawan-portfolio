@@ -23,13 +23,13 @@
   --font-size: 1rem;
   --transition: all 0.3s;
   --gradient-blue: linear-gradient(#53b3db, #3b83d3);
-
+/* 
   --white-color: #e7eefb;
   --black-color: #04040c;
   --grey-color: #374050;
   --aqua-color: #53b3db;
   --blue-color: #3b83d3;
-  --orange-color: #fc6e51;
+  --orange-color: #fc6e51; */
 }
 
 /* create root for dark mode */
@@ -40,10 +40,6 @@
   --opacity: 0.5;
   --hover-color: #53b3db;
   --border-color: #374050;
-
-  --aqua-color: #53b3db;
-  --blue-color: #3b83d3;
-  --orange-color: #fc6e51;
 }
 
 /* html & body style */
@@ -163,7 +159,7 @@ button {
 .hero-image {
   width: 100%;
   height: 700px;
-  background-image: url(/Image/hero-img.jpg);
+  background-image: url('https://i.postimg.cc/d1Gqdt52/dustin-humes-q2-B06-UJj64-unsplash.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
