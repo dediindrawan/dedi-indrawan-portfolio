@@ -1,6 +1,6 @@
 // create fake loading
 let loading = document.querySelector('.loading');
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     // remove loading after content has loaded
     loading.style.display = 'none';
 });
@@ -102,4 +102,16 @@ window.addEventListener('scroll', function () {
     };
     // return condition
     lastScrollUp = scrollTop;
+});
+
+// set year on copyright
+const year = new Date();
+document.querySelector('.year').innerHTML = year.getFullYear();
+
+window.addEventListener('load', () => {
+    let progressBars = document.querySelectorAll('.progress-bar');
+    let progressValue = ['80%', '75%', '30%'];
+    progressBars.forEach((progress, i) => {
+        progress.style.width = progressValue[i];
+    });
 });

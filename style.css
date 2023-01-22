@@ -15,6 +15,7 @@
   --body-color: #e7eefb;
   --font-color: #374050;
   --gradient: linear-gradient(#53b3db, #3b83d3);
+  --flip-gradient: linear-gradient(#374050, #04040c);
   --opacity: 0.2;
   --hover-color: #374050;
   --border-color: #e7eefb;
@@ -32,6 +33,7 @@
   --body-color: linear-gradient(#374050, #04040c);
   --font-color: #e7eefb;
   --gradient: linear-gradient(#374050, #04040c);
+  --flip-gradient: linear-gradient(#53b3db, #3b83d3);
   --opacity: 0.5;
   --hover-color: #53b3db;
   --border-color: #374050;
@@ -86,8 +88,8 @@ button {
 }
 
 .loading img {
-  width: 35%;
-  margin-bottom: 1em;
+  width: 25%;
+  margin-bottom: 1.5em;
 }
 
 iframe {
@@ -294,31 +296,55 @@ section h2::after {
 /* my-skills style */
 .my-skills {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   margin-top: 2em;
 }
 
-.my-skills p {
-  width: 80px;
-  height: 80px;
-  cursor: pointer;
-  border-radius: 50%;
-  box-shadow: 0 0 0px 2px var(--border-color), 0 0 0px 4px var(--aqua-color);
+.box {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--gradient);
+}
+
+.box:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+.my-skills h3 {
+  width: 70px;
+  height: 70px;
+  margin-right: 1em;
+  border-radius: 50%;
+  box-shadow: 0 0 0px 2px var(--border-color), 0 0 0px 4px var(--hover-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--flip-gradient);
   color: var(--white-color);
   transition: var(--transition);
 }
 
-.my-skills p:hover {
-  transform: rotate(360deg);
+.progress {
+  width: 70%;
+  border-radius: 70px;
+  overflow: hidden;
+  box-shadow: 0 0 0px 2px var(--border-color), 0 0 0px 4px var(--hover-color);
 }
 
-.my-skills p:not(:first-child) {
-  margin-left: 1.5em;
+.progress-bar {
+  transition: all 10s;
+}
+
+.box:first-child .progress-bar,
+.box:nth-child(2) .progress-bar,
+.box:last-child .progress-bar {
+  width: 0;
+  text-align: end;
+  padding-right: 2em;
+  padding-left: 0.5em;
+  border-radius: 70px;
+  color: var(--white-color);
+  background: var(--flip-gradient);
 }
 
 /* my-portfolio style */
@@ -461,28 +487,6 @@ section h2::after {
   /* container stye */
   .container {
     width: 100%;
-  }
-
-  /* my-skills style */
-  .my-skills {
-    width: 100%;
-    margin: auto;
-    justify-content: space-between;
-    padding: 1.5em;
-  }
-
-  .my-skills p {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 1.5em;
-  }
-
-  .my-skills p:hover {
-    transform: rotate(360deg);
-  }
-
-  .my-skills p:not(:first-child) {
-    margin-left: 0;
   }
 
   /* my-portfolio style */
