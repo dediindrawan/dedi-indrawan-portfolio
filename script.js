@@ -1,8 +1,9 @@
+// create fake loading
 let loading = document.querySelector('.loading');
 window.addEventListener('load', function() {
-   
+    // remove loading after content has loaded
     loading.style.display = 'none';
-})
+});
 
 // create function when button download cv on click
 document.querySelector('.btn-download-cv').addEventListener('click', function () {
