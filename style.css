@@ -315,7 +315,7 @@ section h2::after {
   height: 70px;
   margin-right: 1em;
   border-radius: 50%;
-  box-shadow: 0 0 0px 2px var(--border-color), 0 0 0px 4px var(--hover-color);
+  box-shadow: 0 0 0px 2px var(--border-color), 0 0 0px 4px var(--font-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -324,11 +324,23 @@ section h2::after {
   transition: var(--transition);
 }
 
-.progress {
+/* parent of bars view */
+.wrapper-ability {
   width: 70%;
+  text-align: start;
+  margin-top: -0.45em;
+}
+
+.title {
+  margin-left: 1em;
+}
+
+.progress {
+  width: 100%;
   border-radius: 70px;
+  margin-top: 0.5em;
   overflow: hidden;
-  box-shadow: 0 0 0px 2px var(--border-color), 0 0 0px 4px var(--hover-color);
+  box-shadow: 0 0 0px 2px var(--border-color), 0 0 0px 4px var(--font-color);
 }
 
 .progress-bar {
@@ -406,7 +418,6 @@ section h2::after {
 }
 
 .social-icon a {
-  font-size: 1.15rem;
   color: var(--font-color);
 }
 
@@ -487,6 +498,10 @@ section h2::after {
   /* container stye */
   .container {
     width: 100%;
+  }
+
+  .title {
+    font-size: .8rem;
   }
 
   /* my-portfolio style */
