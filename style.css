@@ -411,10 +411,33 @@ section h2::after {
   flex-direction: column;
 }
 
+.email {
+  order: 1;
+}
+
+.telp {
+  order: 3;
+}
+
+.social-media {
+  order: 2;
+}
+
 .email span:first-child,
 .telp span:first-child,
 .social-media span:first-child {
   margin-bottom: 1em;
+}
+
+.email button[type='submit'],
+.telp button[type='submit'] {
+  margin-top: 1em;
+  background: var(--gradient-blue);
+}
+
+.email button[type='submit']:hover,
+.telp button[type='submit']:hover {
+  animation: shake 0.3s;
 }
 
 .social-icon a {
@@ -501,7 +524,7 @@ section h2::after {
   }
 
   .title {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   /* my-portfolio style */
@@ -535,7 +558,8 @@ section h2::after {
   .email,
   .telp,
   .social-media {
-    width: 100%;
+    width: 80%;
+    margin: auto;
   }
 
   .telp,
@@ -543,11 +567,23 @@ section h2::after {
     margin-top: 2em;
   }
 
+  .email {
+    order: 1;
+  }
+
+  .telp {
+    order: 2;
+  }
+
+  .social-media {
+    order: 3;
+  }
+
   .email span:first-child,
   .telp span:first-child,
   .social-media span:first-child {
     margin-bottom: 0.5em;
-  }
+  } 
 
   /* footer style */
   .footer {
@@ -621,7 +657,7 @@ section h2::after {
   .email,
   .telp,
   .social-media {
-    width: 50%;
+    width: 45%;
   }
 
   .email,
@@ -631,6 +667,18 @@ section h2::after {
 
   .social-media {
     margin: auto;
+  }
+
+  .email {
+    order: 1;
+  }
+
+  .telp {
+    order: 2;
+  }
+
+  .social-media {
+    order: 3;
   }
 
   .email span:first-child,
