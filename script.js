@@ -108,10 +108,77 @@ window.addEventListener('scroll', function () {
 const year = new Date();
 document.querySelector('.year').innerHTML = year.getFullYear();
 
+// create animation of progress bar values
 window.addEventListener('load', () => {
+    // initialize element
     let progressBars = document.querySelectorAll('.progress-bar');
+    // initialize array
     let progressValue = ['65%', '65%', '20%'];
     progressBars.forEach((progress, i) => {
+        // executed function
         progress.style.width = progressValue[i];
     });
 });
+
+// create interval values
+let value1 = 65;
+let point1 = 0;
+
+// initialize element
+const percentage1 = document.querySelector('.percentage-1');
+
+// set interval funtion
+count1 = setInterval(function () {
+    // run progress
+    percentage1.textContent = `${point1 += 1}%`;
+
+    // set clear interval function
+    if (point1 == value1) {
+        clearInterval(count1);
+        // show this after interval are stoped
+        percentage1.innerHTML = `${point1}%`;
+    };
+
+}, 142); //set timing event
+
+// create interval values
+let value2 = 65;
+let point2 = 0;
+
+// initialize element
+const percentage2 = document.querySelector('.percentage-2');
+
+// set interval funtion
+count2 = setInterval(function () {
+    // run progress
+    percentage2.textContent = `${point2 += 1}%`;
+
+    // set clear interval function
+    if (point2 == value2) {
+        clearInterval(count2);
+        // show this after interval are stoped
+        percentage2.innerHTML = `${point2}%`;
+    };
+
+}, 142); //set timing event
+
+// create interval values
+let value3 = 20;
+let point3 = 0;
+
+// initialize element
+const percentage3 = document.querySelector('.percentage-3');
+
+// set interval funtion
+count3 = setInterval(function () {
+    // run progress
+    percentage3.textContent = `${point3 += 1}%`;
+
+    // set clear interval function
+    if (point3 == value3) {
+        clearInterval(count3);
+        // show this after interval are stoped
+        percentage3.innerHTML = `${point3}%`;
+    };
+
+}, 480); //set timing event
