@@ -43,6 +43,12 @@
   --border-color: #374050;
 }
 
+/* change default selection style */
+::selection {
+  color: var(--white-color);
+  background-color: var(--aqua-color);
+}
+
 /* html & body style */
 html,
 body {
@@ -319,8 +325,176 @@ section h2::after {
 /* about quotes style */
 .about-quotes {
   width: 50%;
-  margin: auto;
-  margin: 2em auto;
+  margin: 2em auto 5em auto;
+  position: relative;
+  display: flex;
+}
+/* slide-1 style */
+.slide-1 {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  animation: slide-1 25s infinite;
+}
+
+/* slide-2 style */
+.slide-2 {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  animation: slide-2 25s infinite;
+}
+
+/* slide-3 style */
+.slide-3 {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  animation: slide-3 25s infinite;
+}
+
+/* slide-1 animation style */
+@keyframes slide-1 {
+  10% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  20% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  30% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  40% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  50% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  60% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  70% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  80% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  90% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* slide-2 animation style */
+@keyframes slide-2 {
+  10% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  20% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  30% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  40% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  50% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  60% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  70% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  80% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  90% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* slide-3 animation style */
+@keyframes slide-3 {
+  10% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  20% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  30% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  40% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  50% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  60% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  70% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  80% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  90% {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 /* about button style */
@@ -606,6 +780,7 @@ section h2::after {
   /* about quotes style */
   .about-quotes {
     width: 100%;
+    margin-bottom: 6em;
   }
 
   /* my-portfolio style */
