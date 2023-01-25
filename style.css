@@ -325,10 +325,12 @@ section h2::after {
 /* about quotes style */
 .about-quotes {
   width: 50%;
+  text-align: center;
   margin: 2em auto 5em auto;
   position: relative;
   display: flex;
 }
+
 /* slide-1 style */
 .slide-1 {
   position: absolute;
@@ -462,7 +464,7 @@ section h2::after {
     opacity: 0;
     visibility: hidden;
   }
-  
+
   100% {
     opacity: 0;
     visibility: hidden;
@@ -520,7 +522,7 @@ section h2::after {
     opacity: 1;
     visibility: visible;
   }
-  
+
   100% {
     opacity: 0;
     visibility: hidden;
@@ -950,6 +952,12 @@ section h2::after {
 
   .my-portfolio figure:not(:first-child) {
     margin-left: 1.5em;
+  }
+
+  /* contact-text style */
+  .contact-text {
+    width: 80%;
+    margin: auto;
   }
 
   /* contact-me style */
