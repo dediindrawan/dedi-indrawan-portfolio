@@ -328,7 +328,6 @@ section h2::after {
 
 /* about quotes style */
 .about-quotes {
-  width: 50%;
   margin: auto;
   margin-top: 2em;
   margin-bottom: 5em;
@@ -336,27 +335,29 @@ section h2::after {
   display: flex;
 }
 
-/* slide-1 style */
-.slide-1 {
+/* slide-1, slide-2, slide-3 style */
+.slide-1,
+.slide-2,
+.slide-3 {
+  width: 100%;
   position: absolute;
   opacity: 0;
   visibility: hidden;
   animation: slide-1 25s infinite;
 }
 
-/* slide-2 style */
+/* slide-1 animation name */
+.slide-1 {
+  animation: slide-1 25s infinite;
+}
+
+/* slide-2 animation name */
 .slide-2 {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
   animation: slide-2 25s infinite;
 }
 
-/* slide-3 style */
+/* slide-3 animation name */
 .slide-3 {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
   animation: slide-3 25s infinite;
 }
 
@@ -680,6 +681,8 @@ section h2::after {
 
 /* contact-text style */
 .contact-text {
+  width: 50%;
+  margin: auto;
   margin-top: 2em;
   padding: 1em;
   border-radius: 10px;
@@ -826,7 +829,6 @@ section h2::after {
 
   /* about quotes style */
   .about-quotes {
-    width: 100%;
     margin-bottom: 6em;
   }
 
@@ -851,6 +853,11 @@ section h2::after {
   .my-portfolio figure:not(:first-child) {
     margin-left: 0;
     margin-top: 1em;
+  }
+
+  /* contact-text style */
+  .contact-text {
+    width: 100%;
   }
 
   /* contact-me style */
@@ -944,11 +951,6 @@ section h2::after {
   /* about-img style */
   .about-img {
     width: 30%;
-  }
-
-  /* about quotes style */
-  .about-quotes {
-    width: 100%;
   }
 
   .my-portfolio figure {
