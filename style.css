@@ -258,6 +258,7 @@ iframe {
   margin: auto;
   padding: 0 1.5em;
   position: relative;
+  overflow: hidden;
 }
 
 /* section style */
@@ -270,17 +271,18 @@ iframe {
   text-align: center;
 }
 
+/* reveal style to hide element */
 .reveal {
-  transform: translateY(150px);
   opacity: 0;
   visibility: hidden;
-  transition: all 1s;
+  transition: all 2s;
 }
 
+/* active style reveal callback to show element */
 .active {
-  transform: translateY(0);
   opacity: 1;
   visibility: visible;
+  transition: all 2s;
 }
 
 section h2::after {
@@ -540,7 +542,6 @@ section h2::after {
   border-radius: 10px;
   position: fixed;
   right: 20px;
-  bottom: 20px;
   font-size: 1.5rem;
   display: flex;
   justify-content: center;
@@ -679,7 +680,6 @@ section h2::after {
   .back-to-top {
     width: 20px;
     height: 20px;
-    bottom: 70px;
     font-size: 1.25rem;
   }
 }
@@ -792,7 +792,6 @@ section h2::after {
   .back-to-top {
     width: 25px;
     height: 25px;
-    bottom: 50px;
     font-size: 1.25rem;
   }
 }

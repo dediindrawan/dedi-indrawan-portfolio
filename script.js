@@ -8,7 +8,7 @@ window.addEventListener('load', function () {
 // create function when button about me on click
 document.querySelector('.btn-about-me').addEventListener('click', function () {
     // direct to page file
-    window.location.href = 'index.html#about';
+    document.location.href = '#about';
 });
 
 // create function when button download cv on click
@@ -63,7 +63,7 @@ document.querySelector('.dark-mode').addEventListener('click', () => {
     lightMode.style.display = 'block';
 });
 
-// create lazy load every window are scrolling
+// create lazy load every window are scrolling on reveal right
 window.addEventListener('scroll', reveal);
 
 // activated funtion
@@ -78,7 +78,6 @@ function reveal() {
         let revealTop = reveals[i].getBoundingClientRect().top;
         // set size scrolling
         let revealPoint = 150;
-
 
         // run funtion
         if (revealTop < windowHeight - revealPoint) {
@@ -101,7 +100,7 @@ window.addEventListener('scroll', function () {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > lastScrollUp) {
         // show button
-        backToTop.style.bottom = '70px';
+        backToTop.style.bottom = '75px';
     } else {
         // hide button
         backToTop.style.bottom = '-20%';
@@ -195,7 +194,7 @@ document.querySelector('.btn-get-email').addEventListener('click', () => {
 // executed get email function
 function getEmail() {
     // // direct to email link address
-    window.open('mailto:dediindrawan812@gmail.com');
+    window.open('mailto:dediindrawan812@gmail.com?subject=Call To Action From Portfolio&body=Hallo, Dedi..');
 };
 
 // add event when user are click button text me by whatsapp
@@ -207,7 +206,7 @@ document.querySelector('.btn-get-phone').addEventListener('click', () => {
 // executed get message function
 function getMessage() {
     // // direct to whatsapp number
-    window.open('https://api.whatsapp.com/send?phone=+628974523500&text=Hello, Dedi..');
+    window.open('https://api.whatsapp.com/send?phone=+628974523500&text=Hallo, Dedi..');
 };
 
 // set year on copyright
