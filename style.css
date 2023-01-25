@@ -355,6 +355,11 @@ section h2::after {
 
 /* slide-1 animation style */
 @keyframes slide-1 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   10% {
     opacity: 1;
     visibility: visible;
@@ -365,9 +370,9 @@ section h2::after {
     visibility: visible;
   }
 
-  30% {
-    opacity: 1;
-    visibility: visible;
+  34% {
+    opacity: 0;
+    visibility: hidden;
   }
 
   40% {
@@ -385,7 +390,7 @@ section h2::after {
     visibility: hidden;
   }
 
-  70% {
+  66% {
     opacity: 0;
     visibility: hidden;
   }
@@ -396,6 +401,11 @@ section h2::after {
   }
 
   90% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
     opacity: 0;
     visibility: hidden;
   }
@@ -403,6 +413,11 @@ section h2::after {
 
 /* slide-2 animation style */
 @keyframes slide-2 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   10% {
     opacity: 0;
     visibility: hidden;
@@ -413,7 +428,7 @@ section h2::after {
     visibility: hidden;
   }
 
-  30% {
+  34% {
     opacity: 0;
     visibility: hidden;
   }
@@ -433,7 +448,7 @@ section h2::after {
     visibility: visible;
   }
 
-  70% {
+  66% {
     opacity: 0;
     visibility: hidden;
   }
@@ -444,6 +459,11 @@ section h2::after {
   }
 
   90% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  100% {
     opacity: 0;
     visibility: hidden;
   }
@@ -451,6 +471,11 @@ section h2::after {
 
 /* slide-3 animation style */
 @keyframes slide-3 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   10% {
     opacity: 0;
     visibility: hidden;
@@ -461,7 +486,7 @@ section h2::after {
     visibility: hidden;
   }
 
-  30% {
+  34% {
     opacity: 0;
     visibility: hidden;
   }
@@ -481,9 +506,9 @@ section h2::after {
     visibility: hidden;
   }
 
-  70% {
-    opacity: 1;
-    visibility: visible;
+  66% {
+    opacity: 0;
+    visibility: hidden;
   }
 
   80% {
@@ -494,6 +519,11 @@ section h2::after {
   90% {
     opacity: 1;
     visibility: visible;
+  }
+  
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -639,6 +669,16 @@ section h2::after {
 
 .my-portfolio figure button[type='submit']:hover {
   animation: shake 0.3s;
+}
+
+/* contact-text style */
+.contact-text {
+  margin-top: 2em;
+  padding: 1em;
+  border-radius: 10px;
+  color: var(--white-color);
+  background: var(--gradient);
+  box-shadow: 0 0 0px 2px var(--border-color), 0 0 0px 4px var(--font-color);
 }
 
 /* contact-me style */
