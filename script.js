@@ -5,6 +5,12 @@ window.addEventListener('load', function () {
     loading.style.display = 'none';
 });
 
+// create function when button about me on click
+document.querySelector('.btn-about-me').addEventListener('click', function () {
+    // direct to page file
+    window.location.href = 'index.html#about';
+});
+
 // create function when button download cv on click
 document.querySelector('.btn-download-cv').addEventListener('click', function () {
     // direct to cv file

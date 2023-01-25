@@ -293,6 +293,41 @@ section h2::after {
   margin-top: 2em;
 }
 
+/* about-img style */
+.about-img {
+  width: 20%;
+  margin: auto;
+  margin-top: 2em;
+  display: flex;
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 0 0px 2px var(--border-color), 0 0 0px 4px var(--aqua-color);
+}
+
+/* about quotes style */
+.about-quotes {
+  width: 50%;
+  margin: auto;
+  margin: 2em auto;
+}
+
+/* about button style */
+#about button[type='submit'] {
+  background: var(--gradient-blue);
+  transition: var(--transition);
+}
+
+/* about button on hover animation effect */
+#about button[type='submit']:hover {
+  animation: shake 0.3s;
+}
+
 /* my-skills style */
 .my-skills {
   display: flex;
@@ -527,6 +562,16 @@ section h2::after {
     font-size: 0.8rem;
   }
 
+  /* about-img style */
+  .about-img {
+    width: 50%;
+  }
+
+  /* about quotes style */
+  .about-quotes {
+    width: 100%;
+  }
+
   /* my-portfolio style */
   .my-portfolio {
     width: 80%;
@@ -583,7 +628,7 @@ section h2::after {
   .telp span:first-child,
   .social-media span:first-child {
     margin-bottom: 0.5em;
-  } 
+  }
 
   /* footer style */
   .footer {
@@ -636,6 +681,16 @@ section h2::after {
 
   /* container stye */
   .container {
+    width: 100%;
+  }
+
+  /* about-img style */
+  .about-img {
+    width: 30%;
+  }
+
+  /* about quotes style */
+  .about-quotes {
     width: 100%;
   }
 
