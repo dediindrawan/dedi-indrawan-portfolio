@@ -25,6 +25,10 @@
   --yellow-color: #ffc300;
   --white-color: #e7eefb;
   --aqua-color: #53b3db;
+  --gradient-html: linear-gradient(#e44d26, #f16529);
+  --gradient-css: linear-gradient(#244ce4, #2b63f3);
+  --javascript-bg-color: #f3db4c;
+  --javascript-font-color: #343434;
   --gradient-blue: linear-gradient(#53b3db, #3b83d3);
 }
 
@@ -354,9 +358,22 @@ section h2::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--flip-gradient);
-  color: var(--white-color);
   transition: var(--transition);
+}
+
+.html {
+  color: var(--white-color);
+  background: var(--gradient-html);
+}
+
+.css {
+  color: var(--white-color);
+  background: var(--gradient-css);
+}
+
+.javascript {
+  color: var(--javascript-font-color);
+  background-color: var(--javascript-bg-color);
 }
 
 /* parent of bars view */
@@ -382,16 +399,34 @@ section h2::after {
   transition: all 8s;
 }
 
-.box:first-child .progress-bar,
-.box:nth-child(2) .progress-bar,
-.box:last-child .progress-bar {
+.box:first-child .progress-bar {
   width: 0;
   text-align: end;
   padding-right: 2em;
   padding-left: 0.5em;
   border-radius: 70px;
   color: var(--white-color);
-  background: var(--flip-gradient);
+  background: var(--gradient-html);
+}
+
+.box:nth-child(2) .progress-bar {
+  width: 0;
+  text-align: end;
+  padding-right: 2em;
+  padding-left: 0.5em;
+  border-radius: 70px;
+  color: var(--white-color);
+  background: var(--gradient-css);
+}
+
+.box:nth-child(3) .progress-bar {
+  width: 0;
+  text-align: end;
+  padding-right: 2em;
+  padding-left: 0.5em;
+  border-radius: 70px;
+  color: var(--javascript-font-color);
+  background-color: var(--javascript-bg-color);
 }
 
 /* my-portfolio style */
