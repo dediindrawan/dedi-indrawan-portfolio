@@ -104,10 +104,6 @@ window.addEventListener('scroll', function () {
     lastScrollUp = scrollTop;
 });
 
-// set year on copyright
-const year = new Date();
-document.querySelector('.year').innerHTML = year.getFullYear();
-
 // create animation of progress bar values
 window.addEventListener('load', () => {
     // initialize element
@@ -139,7 +135,7 @@ count1 = setInterval(function () {
         percentage1.innerHTML = `${point1}%`;
     };
 
-}, 142); //set timing event
+}, 148); //set timing event
 
 // create interval values
 let value2 = 65;
@@ -160,7 +156,7 @@ count2 = setInterval(function () {
         percentage2.innerHTML = `${point2}%`;
     };
 
-}, 142); //set timing event
+}, 148); //set timing event
 
 // create interval values
 let value3 = 20;
@@ -181,4 +177,33 @@ count3 = setInterval(function () {
         percentage3.innerHTML = `${point3}%`;
     };
 
-}, 480); //set timing event
+}, 485); //set timing event
+
+
+// add event when user are click button text me by email
+document.querySelector('.btn-get-email').addEventListener('click', () => {
+    // create new function
+    getEmail();
+});
+
+// executed get email function
+function getEmail() {
+    // // direct to email link address
+    window.open('mailto:dediindrawan812@gmail.com');
+};
+
+// add event when user are click button text me by whatsapp
+document.querySelector('.btn-get-phone').addEventListener('click', () => {
+    // create new function
+    getMessage();
+});
+
+// executed get message function
+function getMessage() {
+    // // direct to whatsapp number
+    window.open('https://api.whatsapp.com/send?phone=+628974523500&text=Hello, Dedi..');
+};
+
+// set year on copyright
+const year = new Date();
+document.querySelector('.year').innerHTML = year.getFullYear();
