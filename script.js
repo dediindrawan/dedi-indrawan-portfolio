@@ -7,7 +7,6 @@ window.addEventListener('load', function () {
 
 // create active nav link
 const navLink = document.querySelectorAll('.nav-link a');
-
 navLink.forEach(nav => {
     // executed function when nav link on click
     nav.addEventListener('click', function () {
