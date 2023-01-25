@@ -189,6 +189,10 @@ iframe {
   color: var(--hover-color);
 }
 
+.active-nav-link {
+  color: var(--hover-color);
+}
+
 /* hero-image style */
 .hero-image {
   width: 100%;
@@ -944,7 +948,7 @@ section h2::after {
 
   /* about quotes style */
   .about-quotes {
-    width: 80%;
+    width: 100%;
   }
 
   .my-portfolio figure {

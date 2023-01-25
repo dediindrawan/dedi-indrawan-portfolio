@@ -5,6 +5,17 @@ window.addEventListener('load', function () {
     loading.style.display = 'none';
 });
 
+// create active nav link
+const navLink = document.querySelectorAll('.nav-link a');
+
+navLink.forEach(nav => {
+    // executed function when nav link on click
+    nav.addEventListener('click', function () {
+        navLink.forEach(navActive => navActive.classList.remove('active-nav-link'));
+        this.classList.add('active-nav-link');
+    });
+});
+
 // create function when button about me on click
 document.querySelector('.btn-about-me').addEventListener('click', function () {
     // direct to page file
