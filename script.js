@@ -39,6 +39,9 @@ document.querySelector('.btn-demo-3').addEventListener('click', function () {
 const lightModeIcon = document.querySelector('.light-mode-icon i');
 const darkModeIcon = document.querySelector('.dark-mode-icon i');
 
+// hiding dark mode icon when page opened
+darkModeIcon.style.display = 'none';
+
 // initialize local storage name
 let themes = localStorage.getItem('theme');
 
