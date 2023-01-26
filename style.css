@@ -165,7 +165,6 @@ iframe {
 .dark-mode-icon {
   color: var(--white-color);
   font-size: 1.25rem;
-  display: none;
 }
 
 /* nav-link style */
