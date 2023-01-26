@@ -5,16 +5,6 @@ window.addEventListener('load', function () {
     loading.style.display = 'none';
 });
 
-// create active nav link
-const navLink = document.querySelectorAll('.nav-link a');
-navLink.forEach(nav => {
-    // executed function when nav link on click
-    nav.addEventListener('click', function () {
-        navLink.forEach(navActive => navActive.classList.remove('active-nav-link'));
-        this.classList.add('active-nav-link');
-    });
-});
-
 // create function when button about me on click
 document.querySelector('.btn-about-me').addEventListener('click', function () {
     // direct to page file
@@ -45,32 +35,69 @@ document.querySelector('.btn-demo-3').addEventListener('click', function () {
     window.location.href = 'https://dediindrawan.github.io/digital-wedding-invitation/';
 });
 
-// activated switching dark mode
-document.querySelector('.light-mode').addEventListener('click', () => {
-    // switching icon light to display none
-    const lightMode = document.querySelector('.light-mode');
-    lightMode.style.display = 'none';
+// create dark and light mode feature
+const lightModeIcon = document.querySelector('.light-mode-icon i');
+const darkModeIcon = document.querySelector('.dark-mode-icon i');
 
-    // add classlist on body
-    document.querySelector('body').classList.add('dark');
+// initialize local storage name
+let themes = localStorage.getItem('theme');
 
-    // switching icon dark to display block
-    const darkMode = document.querySelector('.dark-mode');
-    darkMode.style.display = 'block';
+// theme default
+if (!themes) {
+    localStorage.setItem('theme', 'light');
+};
+
+// run function dark mode
+const switchDarkMode = () => {
+    // add class list on body
+    document.body.classList.add('dark-mode');
+
+    // change icon style
+    lightModeIcon.style.display = 'none';
+    darkModeIcon.style.display = 'block';
+
+    // set key and value on local storage
+    localStorage.setItem('theme', 'dark');
+};
+
+// run function light mode
+const switchLightMode = () => {
+    // remove class list on body
+    document.body.classList.remove('dark-mode');
+
+    // change icon style
+    lightModeIcon.style.display = 'block';
+    darkModeIcon.style.display = 'none';
+
+    // set key and value on local storage
+    localStorage.setItem('theme', 'light');
+};
+
+// set condition
+if (themes === 'dark') {
+     // activate function
+    switchDarkMode();
+};
+
+// activate funtion when light mode icon on click
+lightModeIcon.addEventListener('click', function () {
+    themes = localStorage.getItem('theme');
+    // get key item on local storage
+    if (themes === 'light') {
+        // activate function
+        switchDarkMode();
+    };
 });
 
-// activated switching light mode
-document.querySelector('.dark-mode').addEventListener('click', () => {
-    // switching icon dark to display none
-    const darkMode = document.querySelector('.dark-mode');
-    darkMode.style.display = 'none';
-
-    // remove classlist on body
-    document.querySelector('body').classList.remove('dark');
-
-    // switching icon light to display block
-    const lightMode = document.querySelector('.light-mode');
-    lightMode.style.display = 'block';
+// activate funtion when dark mode icon on click
+darkModeIcon.addEventListener('click', function () {
+    // get key item on local storage
+    themes = localStorage.getItem('theme');
+    // set condition
+    if (themes === 'dark') {
+        // activate function
+        switchLightMode();
+    };
 });
 
 // create lazy load every window are scrolling on reveal right
@@ -110,7 +137,7 @@ window.addEventListener('scroll', function () {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > lastScrollUp) {
         // show button
-        backToTop.style.bottom = '75px';
+        backToTop.style.bottom = '80px';
     } else {
         // hide button
         backToTop.style.bottom = '-20%';
