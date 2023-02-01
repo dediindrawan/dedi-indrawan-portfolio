@@ -1,3 +1,3 @@
 # dedi-indrawan-portfolio
 
-Simply Portfolio Project
+A Simple My Portfolio Website
