@@ -26,7 +26,7 @@ document.querySelector('.btn-demo-1').addEventListener('click', function () {
 // create function when button demo-2 on click
 document.querySelector('.btn-demo-2').addEventListener('click', function () {
     // direct to demo file
-    window.location.href = 'https://dediindrawan.github.io/My-To-Do-List-with-Local-Storage/';
+    window.location.href = 'https://dediindrawan.github.io/todo-app/';
 });
 
 // create function when button demo-3 on click
