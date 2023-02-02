@@ -20,7 +20,7 @@ document.querySelector('.btn-download-cv').addEventListener('click', function ()
 // create function when button demo-1 on click
 document.querySelector('.btn-demo-1').addEventListener('click', function () {
     // direct to demo file
-    window.location.href = 'https://dediindrawan.github.io/the-coffeebeans-marketplace-website/';
+    window.location.href = 'https://dediindrawan.github.io/coffeeshop-web-design/';
 });
 
 // create function when button demo-2 on click
