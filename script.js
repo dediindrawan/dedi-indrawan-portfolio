@@ -32,7 +32,7 @@ document.querySelector('.btn-demo-2').addEventListener('click', function () {
 // create function when button demo-3 on click
 document.querySelector('.btn-demo-3').addEventListener('click', function () {
     // direct to demo file
-    window.location.href = 'https://dediindrawan.github.io/digital-wedding-invitation/';
+    window.location.href = 'https://dediindrawan.github.io/kalkulator-diskon/';
 });
 
 // create dark and light mode feature
