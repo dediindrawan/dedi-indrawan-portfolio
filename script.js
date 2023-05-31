@@ -15,7 +15,7 @@ document.querySelector('.btn-about-me').addEventListener('click', function () {
 document.querySelector('.btn-download-cv').addEventListener('click', function () {
     // direct to cv file
     window.location.href = 'https://drive.google.com/file/d/1kULSXpFBpf-jIHPNyXeKRfUEONz65e6e/view';
-});
+})
 
 // create function when button demo-1 on click
 document.querySelector('.btn-demo-1').addEventListener('click', function () {
