@@ -162,7 +162,7 @@ window.addEventListener('load', () => {
 });
 
 // create interval values
-let value1 = 65;
+let value1 = 90;
 let point1 = 0;
 
 // initialize element
@@ -183,7 +183,7 @@ count1 = setInterval(function () {
 }, 148); //set timing event
 
 // create interval values
-let value2 = 65;
+let value2 = 85;
 let point2 = 0;
 
 // initialize element
@@ -204,7 +204,7 @@ count2 = setInterval(function () {
 }, 148); //set timing event
 
 // create interval values
-let value3 = 20;
+let value3 = 30;
 let point3 = 0;
 
 // initialize element
